@@ -1,19 +1,21 @@
-import { Error404Page } from "@/components/error-404-page";
 
 const Index = () => {
-  const handleHomeClick = () => {
-    // Custom logic for home navigation
-    console.log("Navigating to home page");
-    // Could also trigger analytics, show toast, etc.
-  };
-
   return (
-    <Error404Page 
-      onHomeClick={handleHomeClick}
-      imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/fb595378501e6adb4aea500ad21e0d3db66507dc?placeholderIfAbsent=true"
-      title="Página não encontrada"
-      description="A página que você está procurando não existe ou foi movida. Verifique o endereço ou volte para a página inicial."
-    />
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          Bem-vindo à Página Inicial
+        </h1>
+        <p className="text-lg text-gray-600 mb-8">
+          Esta é a página principal do site.
+        </p>
+        <nav className="space-x-4">
+          <a href="/pagina-inexistente" className="text-blue-600 hover:text-blue-800 underline">
+            Testar página 404
+          </a>
+        </nav>
+      </div>
+    </div>
   );
 };
 

@@ -1,26 +1,20 @@
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+
+import { Error404Page } from "@/components/error-404-page";
 
 const NotFound = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
-    );
-  }, [location.pathname]);
+  const handleHomeClick = () => {
+    // Custom logic for home navigation
+    console.log("Navigating to home page from 404");
+    // Could also trigger analytics, show toast, etc.
+  };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
-          Return to Home
-        </a>
-      </div>
-    </div>
+    <Error404Page 
+      onHomeClick={handleHomeClick}
+      imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/fb595378501e6adb4aea500ad21e0d3db66507dc?placeholderIfAbsent=true"
+      title="Página não encontrada"
+      description="A página que você está procurando não existe ou foi movida. Verifique o endereço ou volte para a página inicial."
+    />
   );
 };
 
