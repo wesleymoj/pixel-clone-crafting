@@ -1,3 +1,4 @@
+
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
 import { ErrorImage } from "@/components/ui/error-image";
@@ -28,8 +29,8 @@ export const Error404Page: React.FC<Error404PageProps> = ({
   };
 
   return (
-    <main className="flex w-screen min-h-screen justify-center items-center box-border bg-white px-0 py-[186.5px] max-md:px-5 max-md:py-[100px] max-sm:px-4 max-sm:py-[60px]">
-      <div className="flex flex-col justify-center items-center gap-10 w-[512px] max-w-[90vw] max-md:w-full max-md:max-w-[600px] max-md:gap-8 max-sm:gap-6">
+    <main className="flex w-full h-screen justify-center items-center bg-white px-5 max-sm:px-4 overflow-hidden">
+      <div className="flex flex-col justify-center items-center gap-10 w-[512px] max-w-[90vw] max-md:gap-8 max-sm:gap-6">
         <article className="flex flex-col justify-center items-center gap-16 w-full max-md:gap-12 max-sm:gap-8">
           <ErrorImage 
             src={imageSrc}
