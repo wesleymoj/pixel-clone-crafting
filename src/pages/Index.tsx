@@ -1,13 +1,19 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Error404Page } from "@/components/error-404-page";
 
 const Index = () => {
+  const handleHomeClick = () => {
+    // Custom logic for home navigation
+    console.log("Navigating to home page");
+    // Could also trigger analytics, show toast, etc.
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <Error404Page 
+      onHomeClick={handleHomeClick}
+      imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/fb595378501e6adb4aea500ad21e0d3db66507dc?placeholderIfAbsent=true"
+      title="Página não encontrada"
+      description="A página que você está procurando não existe ou foi movida. Verifique o endereço ou volte para a página inicial."
+    />
   );
 };
 
